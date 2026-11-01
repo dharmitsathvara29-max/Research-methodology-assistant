@@ -230,22 +230,39 @@ with col_form:
                                     st.warning(send_res.get("error"))
                                 elif send_res.get("status") == "SKIPPED_NO_CREDENTIALS":
                                     st.session_state["dev_sim_code"] = otp_val
+                                    st.session_state.pop("dispatch_network_error", None)
                                     st.rerun()
                                 else:
-                                    st.error(f"Dispatch notice: {send_res.get('error')}")
+                                    st.session_state["dev_sim_code"] = otp_val
+                                    st.session_state["dispatch_network_error"] = send_res.get("error")
+                                    st.rerun()
 
                 dev_code = st.session_state.get("dev_sim_code")
-                if dev_code and not is_gmail_configured():
-                    render_html(f"""
-                    <div style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 6px; padding: 10px 14px; margin: 10px 0;">
-                        <strong style="color: var(--primary); font-size: 0.9rem;">🧪 Local Development / Testing Mode:</strong><br>
-                        <span style="font-size: 0.85rem; color: var(--text); line-height: 1.5;">
-                            Gmail credentials are not configured in <code>.env</code>. For immediate local testing, your verification code is:
-                            <strong style="font-family: monospace; font-size: 1.15rem; color: var(--primary); letter-spacing: 2px;">{html.escape(str(dev_code))}</strong>.
-                            Enter this code below to proceed, or uncheck the email option to download your PDF report on-screen.
-                        </span>
-                    </div>
-                    """)
+                net_err = st.session_state.get("dispatch_network_error")
+                if dev_code:
+                    if net_err:
+                        render_html(f"""
+                        <div style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--warning); border-radius: 6px; padding: 10px 14px; margin: 10px 0;">
+                            <strong style="color: var(--warning); font-size: 0.9rem;">⚠️ Network Notice: Outbound SMTP Socket Closed</strong><br>
+                            <span style="font-size: 0.85rem; color: var(--text); line-height: 1.5;">
+                                Your cloud host or local firewall closed the outbound connection to Google (<code>{html.escape(str(net_err))}</code>).
+                                For immediate verification in this session, your 6-digit code is:
+                                <strong style="font-family: monospace; font-size: 1.15rem; color: var(--primary); letter-spacing: 2px;">{html.escape(str(dev_code))}</strong>.
+                                Enter this code below to proceed, or uncheck the email checkbox to download your publication-grade PDF report directly on-screen.
+                            </span>
+                        </div>
+                        """)
+                    elif not is_gmail_configured():
+                        render_html(f"""
+                        <div style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 6px; padding: 10px 14px; margin: 10px 0;">
+                            <strong style="color: var(--primary); font-size: 0.9rem;">🧪 Local Development / Testing Mode:</strong><br>
+                            <span style="font-size: 0.85rem; color: var(--text); line-height: 1.5;">
+                                Gmail credentials are not configured in <code>.env</code>. For immediate local testing, your verification code is:
+                                <strong style="font-family: monospace; font-size: 1.15rem; color: var(--primary); letter-spacing: 2px;">{html.escape(str(dev_code))}</strong>.
+                                Enter this code below to proceed, or uncheck the email option to download your PDF report on-screen.
+                            </span>
+                        </div>
+                        """)
 
                 otp_rec = st.session_state.get("otp_store")
                 if otp_rec and otp_rec.get("email_hash") == hash_email(norm_email):
@@ -260,6 +277,7 @@ with col_form:
                                 st.session_state["verified_email"] = norm_email
                                 st.session_state.pop("otp_store", None)
                                 st.session_state.pop("dev_sim_code", None)
+                                st.session_state.pop("dispatch_network_error", None)
                                 st.success("Verification successful! You can now generate and receive your report.")
                                 st.rerun()
                             else:

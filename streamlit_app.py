@@ -15,3 +15,4 @@ if __name__ == "__main__":
 else:
     # When Streamlit executes the file in its execution runner
     runpy.run_path(os.path.join(PROJECT_ROOT, "app.py"), run_name="__main__")
+
