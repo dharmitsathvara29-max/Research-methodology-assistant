@@ -1,0 +1,90 @@
+<svg width="480" height="340" viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hero_g1" x1="40" y1="20" x2="440" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="hero_card_g" x1="0" y1="0" x2="260" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="hero_shadow" x="0" y="0" width="300" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1E1B4B" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background Glow & Grid -->
+  <rect x="20" y="10" width="440" height="320" rx="24" fill="url(#hero_g1)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <circle cx="80" cy="60" r="2" fill="#818CF8" fill-opacity="0.3"/>
+  <circle cx="160" cy="60" r="2" fill="#818CF8" fill-opacity="0.3"/>
+  <circle cx="240" cy="60" r="2" fill="#818CF8" fill-opacity="0.3"/>
+  <circle cx="320" cy="60" r="2" fill="#818CF8" fill-opacity="0.3"/>
+  <circle cx="400" cy="60" r="2" fill="#818CF8" fill-opacity="0.3"/>
+  
+  <circle cx="80" cy="140" r="2" fill="#818CF8" fill-opacity="0.3"/>
+  <circle cx="400" cy="140" r="2" fill="#818CF8" fill-opacity="0.3"/>
+
+  <!-- Network Connecting Lines -->
+  <path d="M110 90 L200 130 L310 90 L390 150 L270 210 L140 180 Z" stroke="#C7D2FE" stroke-width="2" stroke-dasharray="4 4"/>
+  
+  <!-- Network Nodes -->
+  <circle cx="110" cy="90" r="8" fill="#4F46E5" fill-opacity="0.2"/>
+  <circle cx="110" cy="90" r="4" fill="#4F46E5"/>
+  
+  <circle cx="310" cy="90" r="8" fill="#7C3AED" fill-opacity="0.2"/>
+  <circle cx="310" cy="90" r="4" fill="#7C3AED"/>
+  
+  <circle cx="390" cy="150" r="8" fill="#0D9488" fill-opacity="0.2"/>
+  <circle cx="390" cy="150" r="4" fill="#0D9488"/>
+
+  <!-- Central Glassmorphism Specification Card -->
+  <g filter="url(#hero_shadow)" transform="translate(110, 65)">
+    <rect width="260" height="175" rx="16" fill="url(#hero_card_g)" stroke="#E0E7FF" stroke-width="1.5"/>
+    
+    <!-- Card Header -->
+    <rect x="20" y="20" width="36" height="36" rx="8" fill="#EEF2FF"/>
+    <path d="M38 28L45 32L38 36L31 32L38 28Z" fill="#4F46E5"/>
+    <path d="M33 34.5V38.5C33 40 35 41.5 38 41.5C41 41.5 43 40 43 38.5V34.5L38 37L33 34.5Z" fill="#4F46E5"/>
+    
+    <rect x="66" y="24" width="110" height="12" rx="3" fill="#1E293B"/>
+    <rect x="66" y="42" width="70" height="8" rx="2" fill="#94A3B8"/>
+    
+    <rect x="200" y="22" width="44" height="20" rx="10" fill="#DEF7EC"/>
+    <text x="222" y="36" fill="#03543F" font-family="system-ui" font-size="10" font-weight="700" text-anchor="middle">PASS</text>
+
+    <!-- Divider -->
+    <line x1="20" y1="70" x2="240" y2="70" stroke="#F1F5F9" stroke-width="1"/>
+    
+    <!-- Metric Rows -->
+    <rect x="20" y="85" width="80" height="7" rx="2" fill="#64748B"/>
+    <rect x="20" y="98" width="130" height="9" rx="2" fill="#3730A3"/>
+    
+    <rect x="20" y="118" width="60" height="7" rx="2" fill="#64748B"/>
+    <rect x="20" y="131" width="105" height="9" rx="2" fill="#0D9488"/>
+
+    <!-- Mini Progress Gauge -->
+    <circle cx="210" cy="118" r="22" stroke="#E2E8F0" stroke-width="4" fill="none"/>
+    <circle cx="210" cy="118" r="22" stroke="#4F46E5" stroke-width="4" stroke-dasharray="110 30" stroke-linecap="round" fill="none" transform="rotate(-90 210 118)"/>
+    <text x="210" y="122" fill="#1E293B" font-family="system-ui" font-size="11" font-weight="800" text-anchor="middle">96%</text>
+    <text x="210" y="152" fill="#64748B" font-family="system-ui" font-size="8" font-weight="600" text-anchor="middle">Score</text>
+  </g>
+
+  <!-- Floating Badge: Power Analysis Verified -->
+  <g transform="translate(60, 240)">
+    <rect width="170" height="40" rx="10" fill="#FFFFFF" stroke="#E2E8F0" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.04))"/>
+    <circle cx="22" cy="20" r="10" fill="#DEF7EC"/>
+    <path d="M18 20L21 23L27 17" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="38" y="24" fill="#1E293B" font-family="system-ui" font-size="11" font-weight="600">G*Power N=128 Validated</text>
+  </g>
+
+  <!-- Floating Badge: Zero Hallucinated Citations -->
+  <g transform="translate(250, 240)">
+    <rect width="175" height="40" rx="10" fill="#FFFFFF" stroke="#E2E8F0" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.04))"/>
+    <circle cx="22" cy="20" r="10" fill="#EFF6FF"/>
+    <path d="M22 13V21M22 25H22.01" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+    <text x="38" y="24" fill="#1E293B" font-family="system-ui" font-size="11" font-weight="600">Zero Citation Hallucinations</text>
+  </g>
+</svg>
+

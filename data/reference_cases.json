@@ -1,0 +1,548 @@
+[
+  {
+    "id": "REF-001",
+    "question_pattern": "Quantitative causal inquiry examining sleep duration or acute intervention on academic or cognitive performance",
+    "pattern_keywords": [
+      "daily sleep duration", "sleep duration", "exam performance", "exam scores",
+      "sleep deprivation", "academic performance", "cognitive performance",
+      "random assignment", "randomized trial", "cause and effect", "causal effect"
+    ],
+    "question_type": "causal",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "experimental", "randomized controlled trial", "true experiment",
+      "quasi-experiment", "laboratory experiment", "field experiment",
+      "longitudinal", "correlational longitudinal"
+    ],
+    "acceptable_analysis": [
+      "independent samples t-test", "anova", "linear regression",
+      "ancova", "mixed-effects models", "regression"
+    ],
+    "rationale": "Causal claims examining interventions or physiological exposures on academic performance require randomized experimental or rigorous quasi-experimental designs.",
+    "notes": "Causal claims with manipulation/intervention require experimental or robust quasi-experimental designs."
+  },
+  {
+    "id": "REF-002",
+    "question_pattern": "Qualitative inquiry into subjective lived experience and belonging of underrepresented student cohorts",
+    "pattern_keywords": [
+      "first-generation", "belonging on campus", "lived experience",
+      "experience belonging", "sense of belonging", "campus belonging",
+      "first-gen college", "undergraduate lived experience"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "phenomenology", "interpretative phenomenological analysis", "ipa",
+      "narrative inquiry", "in-depth qualitative interviews", "phenomenological study"
+    ],
+    "acceptable_analysis": [
+      "thematic analysis", "interpretative phenomenological analysis",
+      "structural and textural description", "content analysis"
+    ],
+    "rationale": "Inquiry into the subjective, nuanced lived experience of social identity and campus belonging requires phenomenological or narrative qualitative traditions.",
+    "notes": "Inquiry into subjective lived experience aligns with phenomenological and qualitative methodologies."
+  },
+  {
+    "id": "REF-003",
+    "question_pattern": "Mixed methods evaluation addressing simultaneous intervention effectiveness and adoption barriers",
+    "pattern_keywords": [
+      "how effective", "adopt or resist", "teachers adopt", "mobile learning app",
+      "effectiveness and why", "adoption barriers", "edtech implementation",
+      "learning app adoption", "educational technology adoption"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["mixed methods"],
+    "acceptable_designs": [
+      "convergent parallel", "explanatory sequential", "exploratory sequential",
+      "convergent parallel mixed methods", "explanatory sequential mixed methods",
+      "mixed methods evaluation", "mixed methods"
+    ],
+    "acceptable_analysis": [
+      "descriptive statistics", "regression or t-test", "thematic analysis",
+      "joint display integration", "thematic coding"
+    ],
+    "rationale": "Inquiries simultaneously addressing quantitative effectiveness ('what works') and qualitative adoption drivers ('how/why') require integrated mixed methods.",
+    "notes": "Simultaneous questions of efficacy (what/how much) and adoption/resistance (why/how) necessitate mixed methods."
+  },
+  {
+    "id": "REF-004",
+    "question_pattern": "Trauma-informed qualitative inquiry exploring coping strategies of domestic violence survivors",
+    "pattern_keywords": [
+      "domestic violence", "survivor", "coping experiences",
+      "coping mechanisms of survivors", "abuse survivors", "intimate partner violence",
+      "trauma recovery", "interpersonal trauma"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "trauma-informed qualitative inquiry", "phenomenology",
+      "interpretative phenomenological analysis", "ipa", "narrative inquiry",
+      "grounded theory", "reflexive thematic analysis"
+    ],
+    "acceptable_analysis": [
+      "trauma-informed thematic analysis", "narrative analysis",
+      "constant comparative method", "reflexive thematic analysis"
+    ],
+    "rationale": "Research with trauma survivors mandates qualitative, trauma-informed, sensitive designs with stringent ethical debriefing and confidentiality safeguards.",
+    "notes": "Highly sensitive populations require trauma-informed, qualitative, non-exploitative designs with rigorous ethics protocols."
+  },
+  {
+    "id": "REF-005",
+    "question_pattern": "Qualitative ethnographic immersion in workplace or community subcultures",
+    "pattern_keywords": [
+      "subculture", "cultural norms", "community immersion",
+      "rituals and practices", "workplace culture", "organizational ethnography",
+      "digital ethnography", "fieldwork immersion"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "ethnography", "participant observation", "autoethnography", "digital ethnography"
+    ],
+    "acceptable_analysis": [
+      "thick description", "thematic analysis", "domain analysis", "taxonomic analysis"
+    ],
+    "rationale": "Deciphering shared meanings, implicit norms, and daily rituals within a community requires sustained ethnographic immersion and participant observation.",
+    "notes": "Cultural norms and social group practices require ethnographic immersion and observation."
+  },
+  {
+    "id": "REF-006",
+    "question_pattern": "Quantitative correlational or survey investigation of non-manipulated variable relationships",
+    "pattern_keywords": [
+      "relationship between", "predicting", "correlation between",
+      "prevalence of", "attitude survey", "screen time and anxiety",
+      "correlational study", "cross-sectional association"
+    ],
+    "question_type": "explanatory",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "cross-sectional survey", "correlational design", "longitudinal survey",
+      "observational cohort", "survey research"
+    ],
+    "acceptable_analysis": [
+      "pearson correlation", "spearman correlation", "multiple linear regression",
+      "logistic regression", "hierarchical regression"
+    ],
+    "rationale": "Investigating naturally occurring associations or predictive relationships across populations without experimental manipulation requires correlational or survey designs.",
+    "notes": "Examining non-manipulated relationships or predictive associations calls for survey or correlational design."
+  },
+  {
+    "id": "REF-007",
+    "question_pattern": "Grounded theory exploration of process-oriented professional decision-making",
+    "pattern_keywords": [
+      "theory emergence", "process of developing", "grounded theory",
+      "how do professionals navigate", "process of coping", "navigating moral dilemmas",
+      "substantive theory", "conceptual framework development"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "grounded theory", "constructivist grounded theory", "classic grounded theory"
+    ],
+    "acceptable_analysis": [
+      "open coding", "axial coding", "selective coding",
+      "constant comparative analysis", "theoretical sampling analysis"
+    ],
+    "rationale": "Inductively generating substantive theory from empirical process data requires systematic grounded theory constant comparative methods.",
+    "notes": "Developing substantive theory from raw process data requires grounded theory methodology."
+  },
+  {
+    "id": "REF-008",
+    "question_pattern": "In-depth case study of an intervention or change within a bounded institutional system",
+    "pattern_keywords": [
+      "implementation in a single school", "organizational change in company",
+      "single case study", "in-depth bounded system", "case study of a hospital",
+      "bounded organizational context", "institutional implementation case"
+    ],
+    "question_type": "descriptive",
+    "acceptable_paradigms": ["qualitative", "mixed methods"],
+    "acceptable_designs": [
+      "single case study", "multiple case study", "embedded case study",
+      "exploratory case study", "explanatory case study"
+    ],
+    "acceptable_analysis": [
+      "within-case analysis", "cross-case synthesis", "pattern matching",
+      "thematic analysis", "explanation building"
+    ],
+    "rationale": "Investigating complex organizational phenomena in depth within real-life bounded boundaries calls for single or multiple case study methodology.",
+    "notes": "In-depth investigation of an event or program within a real-life bounded context mandates case study design."
+  },
+  {
+    "id": "REF-009",
+    "question_pattern": "Systematic literature review and quantitative meta-analysis of pooled clinical or educational trials",
+    "pattern_keywords": [
+      "systematic review of", "pooled effect", "meta-analysis of published",
+      "prisma guidelines", "systematic review and meta-analysis",
+      "forest plot", "pooled effect size", "meta-analytic review"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["quantitative", "mixed methods"],
+    "acceptable_designs": [
+      "systematic literature review", "meta-analysis", "prisma-guided review",
+      "systematic review and meta-analysis"
+    ],
+    "acceptable_analysis": [
+      "random-effects meta-analysis", "forest plot", "subgroup analysis",
+      "publication bias assessment", "funnel plot"
+    ],
+    "rationale": "Synthesizing secondary quantitative evidence across published trials requires PRISMA-compliant systematic review and meta-analytic modeling.",
+    "notes": "Synthesizing secondary evidence across existing published trials requires systematic review / meta-analysis."
+  },
+  {
+    "id": "REF-010",
+    "question_pattern": "Longitudinal prospective cohort study tracking exposures over time into health outcomes",
+    "pattern_keywords": [
+      "longitudinal cohort", "prospective cohort", "tracking over time",
+      "adverse childhood experiences", "cardiovascular health", "incidence of disease",
+      "risk factors over time", "multi-wave cohort", "cohort study"
+    ],
+    "question_type": "causal",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "prospective cohort study", "longitudinal panel design",
+      "observational longitudinal cohort", "cohort design"
+    ],
+    "acceptable_analysis": [
+      "cox proportional hazards regression", "kaplan-meier survival analysis",
+      "generalized estimating equations", "mixed-effects longitudinal models"
+    ],
+    "rationale": "Evaluating the temporal progression of risk exposures to chronic disease over decades requires prospective observational cohort designs.",
+    "notes": "Tracking prospective exposure-outcome sequences over time requires longitudinal cohort designs."
+  },
+  {
+    "id": "REF-011",
+    "question_pattern": "Quasi-experimental policy evaluation using difference-in-differences or interrupted time series",
+    "pattern_keywords": [
+      "policy evaluation", "minimum wage", "difference-in-differences",
+      "quasi-experimental policy", "interrupted time series", "natural experiment",
+      "state policy impact", "economic policy evaluation"
+    ],
+    "question_type": "causal",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "quasi-experimental design", "difference-in-differences",
+      "interrupted time series", "natural experiment", "synthetic control"
+    ],
+    "acceptable_analysis": [
+      "difference-in-differences regression", "fixed-effects panel regression",
+      "interrupted time series arima", "two-way fixed effects"
+    ],
+    "rationale": "Evaluating macro policy changes across jurisdictions where randomization is impossible necessitates econometric quasi-experiments.",
+    "notes": "Macro policy and legislative interventions require difference-in-differences or interrupted time series designs."
+  },
+  {
+    "id": "REF-012",
+    "question_pattern": "Laboratory experiment with factorial manipulation of sensory or cognitive load conditions",
+    "pattern_keywords": [
+      "factorial experiment", "laboratory experiment", "cognitive load",
+      "auditory distraction", "reaction time", "multitasking performance",
+      "controlled laboratory", "within-subjects experiment"
+    ],
+    "question_type": "causal",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "laboratory experiment", "factorial experimental design",
+      "repeated measures experiment", "within-subjects factorial design"
+    ],
+    "acceptable_analysis": [
+      "two-way repeated measures anova", "mixed-design anova",
+      "post-hoc bonferroni tests", "linear mixed-effects models"
+    ],
+    "rationale": "Isolating sensory and cognitive mechanism interactions requires tightly controlled factorial laboratory experiments.",
+    "notes": "Multifactor cognitive mechanism isolation requires controlled factorial laboratory experiments."
+  },
+  {
+    "id": "REF-013",
+    "question_pattern": "Qualitative narrative inquiry examining biographical life histories and professional trajectories",
+    "pattern_keywords": [
+      "narrative inquiry", "life history", "biographical trajectory",
+      "career trajectories", "oral history", "stories of women",
+      "personal narrative", "restorying"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "narrative inquiry", "biographical study", "oral history",
+      "life story research", "narrative case analysis"
+    ],
+    "acceptable_analysis": [
+      "narrative analysis", "structural narrative coding",
+      "thematic narrative analysis", "restorying and chronologizing"
+    ],
+    "rationale": "Exploring individual historical and professional journeys requires narrative inquiry and chronological life history analysis.",
+    "notes": "Capturing individual longitudinal life journeys requires narrative inquiry."
+  },
+  {
+    "id": "REF-014",
+    "question_pattern": "Implementation science evaluation of community health intervention reach, fidelity, and sustainability",
+    "pattern_keywords": [
+      "implementation science", "re-aim framework", "intervention fidelity",
+      "community health program", "diabetes prevention program", "program sustainability",
+      "intervention reach", "program evaluation"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["mixed methods"],
+    "acceptable_designs": [
+      "implementation science evaluation", "hybrid implementation-effectiveness design",
+      "re-aim framework evaluation", "mixed methods program evaluation"
+    ],
+    "acceptable_analysis": [
+      "descriptive adoption statistics", "logistic regression on reach",
+      "thematic barrier analysis", "mixed-methods triangulation display"
+    ],
+    "rationale": "Assessing intervention delivery, adherence, and organizational translation requires implementation science frameworks (e.g., RE-AIM).",
+    "notes": "Healthcare implementation and translational rollouts require implementation science hybrid designs."
+  },
+  {
+    "id": "REF-015",
+    "question_pattern": "AI and machine learning empirical diagnostic performance benchmark vs clinical experts",
+    "pattern_keywords": [
+      "deep learning model", "diagnostic accuracy", "radiologists",
+      "machine learning benchmark", "convolutional neural network", "chest x-rays",
+      "algorithm performance", "ai vs clinician", "auc-roc sensitivity"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "diagnostic accuracy study", "benchmark performance evaluation",
+      "comparative cross-sectional validation", "in-silico test set evaluation"
+    ],
+    "acceptable_analysis": [
+      "receiver operating characteristic analysis", "area under curve auc-roc",
+      "sensitivity and specificity", "cohen kappa inter-rater reliability", "f1-score"
+    ],
+    "rationale": "Evaluating clinical AI model diagnostics against human physicians requires rigorous benchmark diagnostic test accuracy standards.",
+    "notes": "AI/ML algorithm diagnostic evaluations mandate formal diagnostic test accuracy methodologies."
+  },
+  {
+    "id": "REF-016",
+    "question_pattern": "Human-AI interaction and software engineering mixed methods usability evaluation",
+    "pattern_keywords": [
+      "human-ai interaction", "developer productivity", "ai code generation",
+      "developer experience", "cognitive friction", "usability of ai tools",
+      "github copilot productivity", "software developer ergonomics"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["mixed methods"],
+    "acceptable_designs": [
+      "convergent mixed methods", "mixed methods usability study",
+      "explanatory sequential mixed methods", "empirical software engineering study"
+    ],
+    "acceptable_analysis": [
+      "paired t-test on task completion times", "thematic analysis of interview transcripts",
+      "nasa-tlx cognitive workload analysis", "joint display synthesis"
+    ],
+    "rationale": "Assessing human-AI collaboration tools requires measuring objective performance metrics alongside subjective cognitive workload.",
+    "notes": "Human-AI tool evaluation necessitates mixed methods combining task telemetry with user cognitive experience."
+  },
+  {
+    "id": "REF-017",
+    "question_pattern": "Educational design-based research (DBR) testing iterative curriculum or digital learning artifacts",
+    "pattern_keywords": [
+      "design-based research", "dbr", "iterative co-design",
+      "virtual reality physics", "vr classroom", "pedagogical intervention",
+      "curriculum refinement cycles", "educational design experiment"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["mixed methods"],
+    "acceptable_designs": [
+      "design-based research", "educational design research",
+      "iterative design experiment", "action design research"
+    ],
+    "acceptable_analysis": [
+      "pre-post learning gain scores", "interaction analysis of classroom video",
+      "microgenetic learning analytics", "iterative design retrospectives"
+    ],
+    "rationale": "Refining innovative pedagogical technology artifacts through continuous classroom iterations requires design-based research.",
+    "notes": "Iterative educational technology development within classrooms aligns with design-based research."
+  },
+  {
+    "id": "REF-018",
+    "question_pattern": "Phase III double-blind randomized clinical trial evaluating medical pharmacological efficacy",
+    "pattern_keywords": [
+      "randomized clinical trial", "double-blind rct", "placebo-controlled",
+      "monoclonal antibody", "rheumatoid arthritis", "adverse events",
+      "phase iii trial", "pharmacological efficacy", "clinical trial"
+    ],
+    "question_type": "causal",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "double-blind randomized controlled trial", "parallel-group rct",
+      "clinical efficacy trial", "phase iii randomized trial"
+    ],
+    "acceptable_analysis": [
+      "intention-to-treat analysis", "chi-square test on response rates",
+      "logistic regression", "kaplan-meier survival estimates", "ancova on baseline adjustment"
+    ],
+    "rationale": "Establishing regulatory-grade therapeutic drug efficacy and safety profiles requires double-blind randomized clinical trials.",
+    "notes": "Therapeutic medical interventions mandate double-blind randomized clinical trial methodologies."
+  },
+  {
+    "id": "REF-019",
+    "question_pattern": "Sensitive qualitative inquiry exploring suicidal ideation and crisis recovery among adolescent patients",
+    "pattern_keywords": [
+      "suicidal ideation", "adolescent psychiatric", "crisis recovery",
+      "inpatient adolescents", "suicide crisis", "psychiatric hospitalization",
+      "sensitive clinical cohort", "distress protocol"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "interpretative phenomenological analysis", "ipa",
+      "clinical qualitative inquiry", "phenomenological study"
+    ],
+    "acceptable_analysis": [
+      "interpretative phenomenological analysis", "reflexive thematic analysis",
+      "hermeneutic thematic coding"
+    ],
+    "rationale": "Understanding crisis and recovery narratives in vulnerable adolescent psychiatric cohorts mandates sensitive qualitative phenomenological inquiry with ethical distress protocols.",
+    "notes": "Acute psychiatric patient investigations require specialized clinical qualitative methods and safety monitoring."
+  },
+  {
+    "id": "REF-020",
+    "question_pattern": "Quantitative psychometric instrument development and structural equation validation",
+    "pattern_keywords": [
+      "scale development", "psychometric validation", "exploratory factor analysis",
+      "confirmatory factor analysis", "structural equation modeling", "digital burnout scale",
+      "construct validity", "cronbach alpha reliability"
+    ],
+    "question_type": "explanatory",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "psychometric scale development design", "instrument validation study",
+      "cross-sectional measurement design", "structural equation modeling study"
+    ],
+    "acceptable_analysis": [
+      "exploratory factor analysis efa", "confirmatory factor analysis cfa",
+      "cronbach alpha and mcdonald omega", "structural equation modeling sem"
+    ],
+    "rationale": "Creating and validating psychological measurement instruments demands multi-stage psychometric development (EFA/CFA/SEM).",
+    "notes": "Measurement scale creation demands psychometric factor analysis and structural equation validation."
+  },
+  {
+    "id": "REF-021",
+    "question_pattern": "Exploratory sequential mixed methods developing survey metrics from indigenous oral histories",
+    "pattern_keywords": [
+      "exploratory sequential", "indigenous oral histories", "community climate resilience",
+      "qualitative first then quantitative", "instrument development mixed methods",
+      "community-grounded metric", "elder interviews to survey"
+    ],
+    "question_type": "exploratory",
+    "acceptable_paradigms": ["mixed methods"],
+    "acceptable_designs": [
+      "exploratory sequential mixed methods", "qualitative-driven instrument design",
+      "two-phase mixed methods exploratory design"
+    ],
+    "acceptable_analysis": [
+      "inductive thematic analysis", "item pool generation",
+      "exploratory survey factor analysis", "triangulation matrix"
+    ],
+    "rationale": "Translating localized cultural and community knowledge into standardized survey metrics requires exploratory sequential mixed methods.",
+    "notes": "Qualitative-first instrument design from grounded community insights necessitates exploratory sequential mixed methods."
+  },
+  {
+    "id": "REF-022",
+    "question_pattern": "Comparative historical analysis of social institutions across nation-states",
+    "pattern_keywords": [
+      "comparative historical", "public healthcare delivery", "post-war democracies",
+      "institutional divergence", "welfare state reform", "historical institutionalism",
+      "cross-national policy comparison", "macro-historical analysis"
+    ],
+    "question_type": "explanatory",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "comparative historical analysis", "historical institutionalist case study",
+      "qualitative comparative analysis qca", "small-n cross-national comparison"
+    ],
+    "acceptable_analysis": [
+      "process tracing", "qualitative comparative analysis crisp-set or fuzzy-set",
+      "historical narrative analysis", "macro-causal comparative analysis"
+    ],
+    "rationale": "Explaining long-term macro-institutional divergence across countries requires comparative historical analysis and process tracing.",
+    "notes": "Macro cross-national institutional policy divergences call for comparative historical analysis."
+  },
+  {
+    "id": "REF-023",
+    "question_pattern": "Empirical software engineering artifact repository analysis of automated static tools",
+    "pattern_keywords": [
+      "static analysis tools", "pull request defect density", "github repository analysis",
+      "code review throughput", "software repository mining", "empirical software engineering",
+      "code defect analysis", "continuous integration quality"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "mining software repositories msr", "quasi-experimental artifact analysis",
+      "interrupted time series on repository commits", "observational software analytics"
+    ],
+    "acceptable_analysis": [
+      "negative binomial regression on defect counts", "survival analysis on pull request duration",
+      "mann-whitney u test", "wilcoxon signed-rank test"
+    ],
+    "rationale": "Investigating code quality and review latency across repositories requires empirical mining of software repositories (MSR).",
+    "notes": "Evaluating developer artifacts across open-source code repositories requires mining software repositories techniques."
+  },
+  {
+    "id": "REF-024",
+    "question_pattern": "Epidemiological case-control study investigating rare environmental exposures and disease onset",
+    "pattern_keywords": [
+      "case-control study", "microplastic exposure", "colorectal polyps",
+      "odds ratio", "early-onset neoplasia", "environmental epidemiology",
+      "matched case-control", "exposure odds"
+    ],
+    "question_type": "causal",
+    "acceptable_paradigms": ["quantitative"],
+    "acceptable_designs": [
+      "case-control study", "matched case-control design",
+      "retrospective observational study", "epidemiological case-control"
+    ],
+    "acceptable_analysis": [
+      "conditional logistic regression", "unconditional logistic regression",
+      "odds ratio calculations with 95% confidence intervals", "mcnemar test"
+    ],
+    "rationale": "Evaluating rare or latent disease associations with environmental contaminants efficiently requires matched case-control designs.",
+    "notes": "Rare clinical health outcomes and environmental exposures call for retrospective case-control designs."
+  },
+  {
+    "id": "REF-025",
+    "question_pattern": "Qualitative critical discourse analysis of media framing regarding climate migration",
+    "pattern_keywords": [
+      "critical discourse analysis", "media framing", "climate migration",
+      "print journalism discourse", "hegemonic framing", "textual representation",
+      "discourse analysis of news", "framing analysis"
+    ],
+    "question_type": "descriptive",
+    "acceptable_paradigms": ["qualitative"],
+    "acceptable_designs": [
+      "critical discourse analysis cda", "discourse analysis",
+      "qualitative framing analysis", "textual analysis"
+    ],
+    "acceptable_analysis": [
+      "fairclough three-dimensional discourse model", "macro-structural thematic analysis",
+      "ideological framing analysis", "rhetorical analysis"
+    ],
+    "rationale": "Deconstructing institutional power relations and ideological framing in journalistic media mandates critical discourse analysis.",
+    "notes": "Uncovering power dynamics and framing in public textual records requires critical discourse analysis."
+  },
+  {
+    "id": "REF-026",
+    "question_pattern": "Participatory action research collaborating with frontline healthcare workers on protocol redesign",
+    "pattern_keywords": [
+      "participatory action research", "par", "frontline nursing staff",
+      "handover protocol redesign", "emergency department handover",
+      "collaborative workplace research", "action research cycles", "clinician co-design"
+    ],
+    "question_type": "evaluative",
+    "acceptable_paradigms": ["qualitative", "mixed methods"],
+    "acceptable_designs": [
+      "participatory action research", "action research",
+      "collaborative inquiry", "co-design action research"
+    ],
+    "acceptable_analysis": [
+      "collaborative thematic analysis", "reflective cycle documentation",
+      "pre-post protocol handoff compliance audit", "dialogic coding"
+    ],
+    "rationale": "Empowering practitioners to co-investigate and transform their daily workplace protocols requires participatory action research cycles.",
+    "notes": "Democratized organizational problem-solving with practitioner stakeholders necessitates participatory action research."
+  }
+]

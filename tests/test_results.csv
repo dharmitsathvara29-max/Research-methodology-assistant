@@ -1,0 +1,14 @@
+test_id,test_name,prompt_version,expected_outcome,actual_status,test_passed,paradigm,design,score,vulnerable_flag,latency_s,notes
+TC-01,Quantitative causal,v1_basic,PASS,DELIVERED,True,Quantitative,Correlational longitudinal design (prospective study),92.0,False,16.67,
+TC-01,Quantitative causal,v2_structured,PASS,DELIVERED,True,Quantitative,Prospective Longitudinal Cohort Study,94.0,False,18.0,
+TC-01,Quantitative causal,v3_decomposed,PASS,DELIVERED,True,Quantitative,Prospective Longitudinal Observational Study,92.0,False,17.09,
+TC-02,Qualitative exploratory,v1_basic,PASS,DELIVERED,True,Qualitative,Phenomenological Study,96.0,True,16.53,
+TC-02,Qualitative exploratory,v2_structured,PASS,DELIVERED,True,Qualitative,Interpretive Phenomenological Analysis (IPA),96.0,True,15.09,
+TC-02,Qualitative exploratory,v3_decomposed,PASS,DELIVERED,True,Qualitative,Phenomenological Study (Interpretative Phenomenological Analysis - IPA),92.0,True,16.77,
+TC-03,Mixed methods,v1_basic,PASS,DELIVERED,True,Mixed Methods,Explanatory Sequential Mixed Methods (QUAN -> qual),88.0,False,18.32,
+TC-03,Mixed methods,v2_structured,PASS,DELIVERED,True,Mixed Methods,Explanatory Sequential Design (QUAN -> qual),90.0,False,17.45,
+TC-03,Mixed methods,v3_decomposed,PASS,DELIVERED,True,Mixed Methods,Explanatory Sequential Mixed Methods Design (QUAN -> qual),94.0,False,18.6,
+TC-04,Ethically sensitive,v1_basic,PASS,DELIVERED,True,Qualitative,Interpretative Phenomenological Analysis (IPA),98.0,True,17.24,Vulnerable population safeguard successfully triggered.
+TC-04,Ethically sensitive,v2_structured,PASS,DELIVERED,True,Qualitative,Interpretative Phenomenological Analysis (IPA),96.0,True,16.27,Vulnerable population safeguard successfully triggered.
+TC-04,Ethically sensitive,v3_decomposed,PASS,DELIVERED,True,Qualitative,Phenomenological Inquiry (Interpretative Phenomenological Analysis - IPA),96.0,True,17.92,Vulnerable population safeguard successfully triggered.
+TC-05,EDGE CASE: Adversarial & Malformed,v3_decomposed,REJECTED_INPUT,REJECTED_INPUT,True,N/A (Refused),N/A (Refused),100.0,False,0.0,Correctly intercepted by Stage 1 input guardrails; zero hallucination; clarification provided.

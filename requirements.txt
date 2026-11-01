@@ -1,0 +1,8 @@
+google-genai>=2.34.0
+streamlit>=1.36.0
+pydantic>=2.14.0
+python-dotenv>=1.2.0
+pandas>=2.0.0
+plotly>=6.0.0
+reportlab>=4.1.0
+pypdf>=4.0.0

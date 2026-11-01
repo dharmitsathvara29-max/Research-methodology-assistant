@@ -1,0 +1,29 @@
+[theme]
+base = "light"
+primaryColor = "#3730A3"
+backgroundColor = "#FAF7F2"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F172A"
+font = "Atkinson Hyperlegible:https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap"
+headingFont = "Crimson Pro:https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&display=swap"
+baseRadius = "12px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+paddingTop = "1.25rem"
+paddingBottom = "2.5rem"
+
+[theme.sidebar]
+backgroundColor = "#0F172A"
+secondaryBackgroundColor = "#1E293B"
+textColor = "#F8FAFC"
+borderColor = "#334155"
+primaryColor = "#B45309"
+linkColor = "#E2E8F0"
+showWidgetBorder = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

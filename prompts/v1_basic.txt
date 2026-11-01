@@ -1,0 +1,31 @@
+Recommend a research methodology for the following research question and discipline.
+
+Research Question: {research_question}
+Discipline: {discipline}
+Constraints: {constraints_summary}
+
+Provide your answer as a JSON object with these keys:
+- parsed_question_summary
+- recommended_paradigm (Quantitative, Qualitative, or Mixed Methods)
+- paradigm_justification
+- research_design
+- design_rationale
+- sampling_strategy
+- sample_size_rationale
+- data_collection_instruments (list of strings)
+- data_collection_procedures
+- data_analysis_techniques (list of strings)
+- analysis_rationale
+- validity_and_reliability_considerations
+- ethical_considerations (list of strings)
+- vulnerable_population_flag (boolean)
+- irb_ethics_board_required (boolean)
+- limitations_and_risks (list of strings)
+- alternative_methodologies (list of objects with paradigm, design, rationale_for_rejection)
+- step_by_step_roadmap (list of objects with step_number, title, description, estimated_duration)
+- confidence_level (Low, Medium, or High)
+- confidence_rationale
+- academic_disclaimer
+
+Only respond with the JSON object.
+
