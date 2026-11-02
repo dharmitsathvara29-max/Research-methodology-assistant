@@ -282,41 +282,6 @@ with st.sidebar:
             "• Local data privacy: all queries can be purged in History."
         )
 
-    # Gmail Automation Controls
-    from src.config import is_gmail_configured, get_gmail_address
-    from src.storage import mask_email
-    from src.emailer import send_report_email
-
-    if is_gmail_configured():
-        gmail_addr = get_gmail_address()
-        render_html(f"""
-        <div style="background: var(--primary-subtle); border: 1px solid var(--primary-border); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px;">
-            <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem;">✉️ Gmail Automated</span>
-            <div style="font-size: 0.72rem; color: var(--muted); margin-top: 2px;">{mask_email(gmail_addr)}</div>
-        </div>
-        """)
-        if st.button("Send Test Email", key="sidebar_test_email", width="stretch"):
-            with st.spinner("Dispatching test email..."):
-                reports_dir = os.path.join(PROJECT_ROOT, "reports")
-                os.makedirs(reports_dir, exist_ok=True)
-                test_pdf_path = os.path.join(reports_dir, "test_verification_report.pdf")
-                from src.pdf_report import save_pdf
-                save_pdf(
-                    {"run_id": "test-verif-01", "research_question": "System Verification: MethodWise Automated Dispatch", "discipline": "Computer Science"},
-                    None, None, output_path=test_pdf_path
-                )
-                test_res = send_report_email(
-                    recipient=gmail_addr,
-                    run_record={"run_id": "test-verif-01", "research_question": "System Verification: MethodWise Automated Dispatch"},
-                    pdf_path=test_pdf_path,
-                    summary={"paradigm": "Quantitative", "design": "System Dispatch Test", "confidence": "High", "label": "PASS", "roadmap_preview": ["Verification Step 1: SMTP delivery"]},
-                    session_id="sidebar_test"
-                )
-                if test_res["status"] == "SENT":
-                    st.success(f"Sent! Check your inbox / Sent folder ({mask_email(gmail_addr)}).")
-                else:
-                    st.error(f"Dispatch notice: {test_res.get('error')}")
-
     # Session Privacy Status (masked owner_id, never shown in full)
     curr_owner = st.session_state.get("owner_id", "")
     masked_owner = f"{curr_owner[:4]}...{curr_owner[-4:]}" if len(curr_owner) >= 8 else "Private"
@@ -342,6 +307,42 @@ with st.sidebar:
                         st.error("Invalid credentials.")
             else:
                 st.success("Admin mode active.")
+                
+                # Internal diagnostic dispatch control (restricted to unlocked admin session only)
+                from src.config import is_gmail_configured, get_gmail_address
+                from src.storage import mask_email
+                from src.emailer import send_report_email
+
+                if is_gmail_configured():
+                    gmail_addr = get_gmail_address()
+                    render_html(f"""
+                    <div style="background: var(--primary-subtle); border: 1px solid var(--primary-border); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px;">
+                        <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem;">✉️ Gmail Automated</span>
+                        <div style="font-size: 0.72rem; color: var(--muted); margin-top: 2px;">{mask_email(gmail_addr)}</div>
+                    </div>
+                    """)
+                    if st.button("Send Test Email", key="sidebar_test_email", width="stretch"):
+                        with st.spinner("Dispatching test email..."):
+                            reports_dir = os.path.join(PROJECT_ROOT, "reports")
+                            os.makedirs(reports_dir, exist_ok=True)
+                            test_pdf_path = os.path.join(reports_dir, "test_verification_report.pdf")
+                            from src.pdf_report import save_pdf
+                            save_pdf(
+                                {"run_id": "test-verif-01", "research_question": "System Verification: MethodWise Automated Dispatch", "discipline": "Computer Science"},
+                                None, None, output_path=test_pdf_path
+                            )
+                            test_res = send_report_email(
+                                recipient=gmail_addr,
+                                run_record={"run_id": "test-verif-01", "research_question": "System Verification: MethodWise Automated Dispatch"},
+                                pdf_path=test_pdf_path,
+                                summary={"paradigm": "Quantitative", "design": "System Dispatch Test", "confidence": "High", "label": "PASS", "roadmap_preview": ["Verification Step 1: SMTP delivery"]},
+                                session_id="sidebar_test"
+                            )
+                            if test_res["status"] == "SENT":
+                                st.success(f"Sent! Check inbox ({mask_email(gmail_addr)}).")
+                            else:
+                                st.error(f"Dispatch notice: {test_res.get('error')}")
+
                 if st.button("Lock / Exit Admin", key="btn_sidebar_admin_lock", width="stretch"):
                     st.session_state["is_admin"] = False
                     st.rerun()

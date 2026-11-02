@@ -11,6 +11,7 @@ import os
 import re
 import time
 import hmac
+import ssl
 import secrets
 import hashlib
 import smtplib
@@ -84,22 +85,37 @@ class GmailSMTPBackend(EmailBackend):
                 "error": "Gmail credentials (GMAIL_ADDRESS and GMAIL_APP_PASSWORD) are not configured in environment."
             }
 
-        max_attempts = 2
         last_error = None
         msg_id = message["Message-ID"]
 
-        for attempt in range(1, max_attempts + 1):
+        # Dual-transport: Attempt Port 465 (SSL) first, failover to Port 587 (STARTTLS)
+        # Port 587 is standard RFC 6409 submission, highly resilient across cloud hosts & strict firewalls
+        transports = [
+            ("ssl", self.host, self.port),
+            ("starttls", self.host, 587)
+        ]
+
+        for proto, host, port in transports:
             try:
-                with smtplib.SMTP_SSL(self.host, self.port, timeout=self.timeout) as server:
-                    server.login(sender_addr, sender_pwd)
-                    server.send_message(message)
+                context = ssl.create_default_context()
+                if proto == "ssl":
+                    with smtplib.SMTP_SSL(host, port, timeout=self.timeout, context=context) as server:
+                        server.login(sender_addr, sender_pwd)
+                        server.send_message(message)
+                else:
+                    with smtplib.SMTP(host, port, timeout=self.timeout) as server:
+                        server.ehlo()
+                        server.starttls(context=context)
+                        server.ehlo()
+                        server.login(sender_addr, sender_pwd)
+                        server.send_message(message)
 
                 return {
                     "status": "SENT",
                     "message_id": str(msg_id),
                     "error": None
                 }
-            except smtplib.SMTPAuthenticationError as auth_err:
+            except smtplib.SMTPAuthenticationError:
                 return {
                     "status": "FAILED",
                     "message_id": None,
@@ -107,9 +123,8 @@ class GmailSMTPBackend(EmailBackend):
                 }
             except (smtplib.SMTPConnectError, smtplib.SMTPServerDisconnected, TimeoutError, OSError) as transient_err:
                 last_error = transient_err
-                if attempt < max_attempts:
-                    time.sleep(1.0)
-                    continue
+                time.sleep(0.5)
+                continue
             except Exception as general_err:
                 last_error = general_err
                 break
